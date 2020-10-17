@@ -12,6 +12,6 @@ services:
     image: couchdb
     volumes:
     - ./data:/opt/couchdb/data
-    - ./init:/opt/couchdb/etc/local.d/
+    - ../../couchdb:/opt/couchdb/etc/local.d/
     ports:
     - "5984:5984"
