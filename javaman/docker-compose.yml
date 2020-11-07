@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  nginx:
+    image: nginx
+    restart: always
+    volumes:
+     - ./nginx.conf:/etc/nginx/nginx.conf
+     - ../..:/etc/certs
+    ports:
+     - "443:443"
+  app:
+    image: rlkamradt/javaman
+    ports:
+      - 3001:3001
