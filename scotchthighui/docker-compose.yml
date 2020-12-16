@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  nginx:
+    image: rlkamradt/scotchthighui
+    restart: always
+    volumes:
+     - ./nginx.conf:/etc/nginx/nginx.conf
+     - ../..:/etc/certs
+    ports:
+     - "443:443"
